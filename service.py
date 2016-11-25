@@ -1,4 +1,4 @@
-#from grovepi import *
+from grovepi import *
 
 import requests
 import sys
