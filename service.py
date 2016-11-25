@@ -1,4 +1,4 @@
-from grovepi import *
+#from grovepi import *
 
 import requests
 import sys
@@ -49,10 +49,10 @@ counter = 0
 MAX = 50
 while True:
     try:
-        [ temp,hum ] = dht(dht_sensor_port,dht_sensor_type)             #Get the temperature and Humidity from the DHT sensor
-        # temp = 0
-        # hum = 0
-		if temp == -1 or math.isnan(temp) or hum == -1 or math.isnan(hum):
+        #[ temp,hum ] = dht(dht_sensor_port,dht_sensor_type)             #Get the temperature and Humidity from the DHT sensor
+        temp = 0
+        hum = 0
+	if temp == -1 or math.isnan(temp) or hum == -1 or math.isnan(hum):
         	print("invalid read")
         	continue 
 
