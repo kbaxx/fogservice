@@ -7,10 +7,10 @@ import json
 def calculateData(data):
 	avgTemp = 0
 	avgHum = 0
-	maxTemp = sys.maxint
-	maxHum = sys.maxint 
-	minTemp = -sys.maxint - 1 
-	minHum = -sys.maxint - 1 
+	maxTemp = -sys.maxint - 1
+	maxHum = -sys.maxint - 1 
+	minTemp = sys.maxint
+	minHum = sys.maxint
 	sumTemp = 0
 	sumHum = 0
 	for value in data:
