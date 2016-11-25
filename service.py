@@ -3,6 +3,7 @@ from grovepi import *
 import requests
 import sys
 import json
+import math
 
 def calculateData(data):
 	avgTemp = 0
@@ -51,6 +52,10 @@ while True:
         [ temp,hum ] = dht(dht_sensor_port,dht_sensor_type)             #Get the temperature and Humidity from the DHT sensor
         # temp = 0
         # hum = 0
+		if temp == -1 or math.isnan(temp) or hum == -1 or math.isnan(hum):
+        	print("invalid read")
+        	continue 
+
         print("temp =", temp, "C, humidity =", hum,"%")
 
         # calculate the average, max, min of a specific size of measurements and send it to the cloud
