@@ -34,7 +34,7 @@ def calculateData(data):
 
 
 def sendRequest(data):
-	host = "http://0.0.0.0:8081"
+	host = "http://192.168.1.110:8081"
 	response = requests.post(host+"/compunit/serviceData", data=json.dumps(data), headers={"Content-Type": "application/json"})
 	print(response.text)
 
@@ -66,4 +66,4 @@ while True:
         	sendRequest(calculatedData)
         	counter = 0
     except (IOError,TypeError) as e:
-        print("Error")
+        print("Error:"+str(e))
