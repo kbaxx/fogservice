@@ -34,7 +34,7 @@ def calculateData(data):
 
 
 def sendRequest(data):
-	host = "http://192.168.1.110:8081"
+	host = "http://172.17.0.1:8081"
 	response = requests.post(host+"/compunit/serviceData", data=json.dumps(data), headers={"Content-Type": "application/json"})
 	print(response.text)
 
@@ -46,7 +46,7 @@ dht_sensor_type = 0             # change this depending on your sensor type - se
 
 data = []
 counter = 0
-MAX = 50
+MAX = 20
 while True:
     try:
         [ temp,hum ] = dht(dht_sensor_port,dht_sensor_type)             #Get the temperature and Humidity from the DHT sensor
