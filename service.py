@@ -34,7 +34,7 @@ def calculateData(data):
 
 
 def sendRequest(data):
-	host = "http://192.168.1.101:8081"
+	host = "http://0.0.0.0:8081"
 	response = requests.post(host+"/compunit/serviceData", data=json.dumps(data), headers={"Content-Type": "application/json"})
 	print(response.text)
 
