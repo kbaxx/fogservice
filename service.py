@@ -21,9 +21,9 @@ def calculateData(data):
 			maxTemp = temp
 		if hum > maxHum: 
 			maxHum = hum
-		if temp < minTemp:
+		if temp < minTemp and temp != 0:
 			minTemp = temp
-		if hum < minHum:
+		if hum < minHum and temp != 0:
 			minHum = hum
 		sumTemp += temp
 		sumHum += hum
