@@ -48,7 +48,7 @@ dht_sensor_type = 0             # change this depending on your sensor type - se
 
 data = []
 counter = 0
-MAX = 100
+MAX = 200
 while True:
     try:
         [ temp,hum ] = dht(dht_sensor_port,dht_sensor_type)             #Get the temperature and Humidity from the DHT sensor
